@@ -1,5 +1,5 @@
 name: coinpay
-description: "A new Flutter project."
+description: "A new Flutter project showcasing how to tests using the flutter skeleton template"
 
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  mocktail: ^1.0.1
 
 dev_dependencies:
   flutter_test:

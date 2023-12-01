@@ -1,4 +1,6 @@
-# coinpay
+# skeleton
+[![CI](https://github.com/Mastersam07/skeleton_tests/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mastersam07/skeleton_tests/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/Mastersam07/skeleton_tests/graph/badge.svg?token=FySYh7lkFK)](https://codecov.io/gh/Mastersam07/skeleton_tests)
 
 A new Flutter project.
 
