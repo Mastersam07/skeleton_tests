@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [master, dev]
+    paths:
+      - 'lib/**'
+      - '.github/**'
+      - 'test/**'
+  pull_request:
+    branches: [master, dev]
+    paths:
+      - 'lib/**'
+      - '.github/**'
+      - 'test/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup flutter 🛠️
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+          cache: true
+      - name: Fetch dependencies 🛜
+        run: flutter packages get
+      - name: Analyze project 🧐
+        run: flutter analyze .
+      - name: Run tests 🧪
+        run: flutter test --coverage
+      - name: Upload coverage reports to Codecov 🔖
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          token: ${{ secrets.CODECOV_TOKEN }}
