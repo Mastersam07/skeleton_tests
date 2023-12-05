@@ -15,6 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   mocktail: ^1.0.1
+  signals: ^1.4.1
 
 dev_dependencies:
   flutter_test:
