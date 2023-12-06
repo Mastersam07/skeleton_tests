@@ -149,6 +149,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+  state_beacon:
+    dependency: "direct main"
+    description:
+      name: state_beacon
+      sha256: "037e304f93389c1ef4615c7d0c7c49f1bd3846033f13cdd44f224cb93fe0cad0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.2"
   stream_channel:
     dependency: transitive
     description:
@@ -199,3 +207,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.0 <4.0.0"
+  flutter: ">=1.17.0"
