@@ -26,7 +26,7 @@ void main() {
     await mockController.loadSettings();
 
     // Initial state check
-    expect(mockController.themeMode,
+    expect(mockController.themeMode.value,
         equals(ThemeMode.system)); // Assuming this is the default
 
     // Act: Open dropdown and select 'Light Theme'
@@ -37,6 +37,6 @@ void main() {
     await tester.pumpAndSettle(); // Wait for the dropdown to close
 
     // Assert
-    expect(mockController.themeMode, equals(ThemeMode.light));
+    expect(mockController.themeMode.value, equals(ThemeMode.light));
   });
 }

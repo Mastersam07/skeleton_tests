@@ -27,7 +27,7 @@ class SettingsView extends StatelessWidget {
         // SettingsController is updated, which rebuilds the MaterialApp.
         child: DropdownButton<ThemeMode>(
           // Read the selected themeMode from the controller
-          value: controller.themeMode,
+          value: controller.themeMode.value,
           // Call the updateThemeMode method any time the user selects a theme.
           onChanged: controller.updateThemeMode,
           items: const [

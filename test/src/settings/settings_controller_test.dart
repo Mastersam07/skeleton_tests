@@ -24,7 +24,7 @@ void main() {
       await settingsController.loadSettings();
 
       // Assert
-      expect(settingsController.themeMode, ThemeMode.dark);
+      expect(settingsController.themeMode.value, ThemeMode.dark);
       // Verify notifyListeners was called, you might need a way to check this
     });
 
@@ -44,7 +44,7 @@ void main() {
       await settingsController.updateThemeMode(ThemeMode.light);
 
       // Assert
-      expect(settingsController.themeMode, ThemeMode.light);
+      expect(settingsController.themeMode.value, ThemeMode.light);
       // Verify notifyListeners was called
       verify(() => mockSettingsService.updateThemeMode(ThemeMode.light))
           .called(1);
