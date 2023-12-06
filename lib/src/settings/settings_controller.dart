@@ -36,7 +36,7 @@ class SettingsController with ChangeNotifier {
     if (newThemeMode == null) return;
 
     // Do not perform any work if new and old ThemeMode are identical
-    if (newThemeMode == _themeMode) return;
+    if (newThemeMode == _themeMode.value) return;
 
     // Otherwise, store the new ThemeMode in memory
     _themeMode.value = newThemeMode;
